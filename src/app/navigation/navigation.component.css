@@ -1,0 +1,25 @@
+.main-nav {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+.menu-header {
+	height: 5rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white
+}
+.route {
+	margin: 1rem;
+	width: 100%;
+	color: white;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.route:hover {
+	text-decoration: underline;
+}

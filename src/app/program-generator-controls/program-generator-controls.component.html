@@ -1,0 +1,4 @@
+<button *ngIf="UserConfigurationService.pageCreationStep < UserConfigurationService.selectedWidgets.length + 1" class="control next-step" (click)="moveToNextStep()">Next Step</button>
+<button *ngIf="UserConfigurationService.pageCreationStep === UserConfigurationService.selectedWidgets.length + 1 && UserConfigurationService.pageCreationStep > 1" class="control generate" (click)="UserConfigurationService.generatePageHTML()">Generate Page!</button>
+<button *ngIf="UserConfigurationService.pageCreationStep > 1" class="control prev-step" (click)="moveToPrevStep()">Previous Step</button>
+<button *ngIf="UserConfigurationService.pageCreationStep > 1" class="control start-over" (click)="startOver()">Start Over</button>

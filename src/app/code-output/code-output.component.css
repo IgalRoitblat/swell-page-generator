@@ -1,0 +1,21 @@
+h3 {
+	width: 100%;
+	text-align: center;
+}
+
+code {
+	width: 80%;
+	display: block;
+	white-space: pre-wrap;
+	color: #393318;
+	background-color: #eff0f1;
+}
+
+.copy-code {
+	height: 2rem;
+	width: 20%;
+	background-color: transparent;
+	box-shadow: none;
+	border: 1px solid black;
+	margin: 2rem;
+}

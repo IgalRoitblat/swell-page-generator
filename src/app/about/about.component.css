@@ -1,0 +1,21 @@
+.about-page-content {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+
+.about-page-content h2 {
+	width: 100%;
+	text-align: center;
+}
+
+app-about-link {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+

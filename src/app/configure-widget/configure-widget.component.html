@@ -1,0 +1,29 @@
+<div class="configure-widget" *ngIf="UserConfigurationService.pageCreationStep === this.index + 1" class="widget-config-container">
+	<h3>Step {{ index + 1 }}: Configure {{ widget.name }}</h3>
+	<p>Fields that are left blank will be assigned a default value</p>
+	<form #myform="ngForm" (ngSubmit)="register(myform)" class="widgetConfigForm">
+		<fieldset *ngFor="let field of widget.configuration">
+			<label *ngIf="field.selectionType === 'select'">
+				<span>Choose {{ field.pretty }}: </span>
+				<select name="{{ field.name }}" ngModel>
+					<option *ngFor="let option of field.options" value="{{ option }}">{{ option }}</option>
+				</select>
+			</label>
+			<label *ngIf="field.selectionType === 'checkbox'" class="checkbox">
+				<span>Choose {{ field.pretty }}: </span>
+				<div *ngFor="let option of field.options" class="radio-set">
+					<input type="checkbox" name="{{ option.name }}" value="{{ option.value }}" ngModel>
+					<span>{{ option.value }}</span>
+				</div>
+			</label>
+			<label *ngIf="field.selectionType === 'text'">
+				<span>Choose {{ field.pretty }}: </span>
+				<input type="text" name="{{ field.name }}" ngModel>
+			</label>
+		</fieldset>
+		<fieldset>
+			<button #saveWidget class="save-widget" type="submit">Save Widget Settings</button>
+			<span class="save-disclaimer"><span style="color: red;">Important!</span> Only saved widgets will be included in the code output.</span>
+		</fieldset>
+	</form>
+</div>

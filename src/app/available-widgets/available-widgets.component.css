@@ -1,0 +1,15 @@
+.available-widgets {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	margin: 0;
+	padding: 0;
+}
+
+app-available-widget {
+	width: 30%;
+	margin: 1%;
+	box-sizing: border-box;
+}

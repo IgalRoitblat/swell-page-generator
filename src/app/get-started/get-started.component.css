@@ -1,0 +1,31 @@
+.program-generator {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+.widget-config-container {
+	width: 100%;
+}
+app-choose-widgets {
+	width: 100%;
+}
+app-program-generator-controls {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+app-configure-widget {
+	width: 100%;
+}
+
+app-code-output {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}

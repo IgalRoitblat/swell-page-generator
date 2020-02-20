@@ -1,0 +1,29 @@
+.configure-widget {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+h3, p {
+	text-align: center;
+}
+.save-disclaimer {
+	width: 100%;
+	font-size: 12px;
+	margin-left: 1%;
+}
+fieldset {
+	border: none;
+}
+.widget-config-container {
+	width: 100%;
+}
+.checkbox {
+	width: 100%;
+	display: flex;
+}
+.radio-set {
+	margin-left: 1%;
+}

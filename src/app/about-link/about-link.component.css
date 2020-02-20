@@ -1,0 +1,22 @@
+.copy-code-container {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 1%;
+}
+
+code {
+	width: 60%;
+	text-align: center;
+	height: 4rem;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+
+p {
+	width: 100%;
+	text-align: center;
+}

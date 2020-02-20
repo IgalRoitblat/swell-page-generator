@@ -1,0 +1,17 @@
+.home {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+
+.home h2 {
+	width: 100%;
+	text-align: center;
+}
+
+.home p {
+	width: 100%;
+	text-align: center;
+}
