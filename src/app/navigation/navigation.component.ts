@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-navigation',
@@ -6,8 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navigation.component.css']
 })
 export class NavigationComponent implements OnInit {
-
+  @ViewChild("getStartedPrompt", {static: false}) getStartedPrompt: ElementRef;
   constructor() { }
+
+  onGetStarted() {
+  	console.log("click")
+  	this.getStartedPrompt.nativeElement.style.display = 'none';
+  }
 
   ngOnInit() {
   }

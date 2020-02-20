@@ -18,6 +18,8 @@ import { ConfigureWidgetComponent } from './configure-widget/configure-widget.co
 import { EscapeHtmlPipe } from './pipes/keep-html.pipe';
 import { CodeOutputComponent } from './code-output/code-output.component';
 import { AboutLinkComponent } from './about-link/about-link.component';
+import { ProgressBarComponent } from './progress-bar/progress-bar.component';
+import { ProgressStageComponent } from './progress-stage/progress-stage.component';
 
 const appRoutes: Routes = [
   {
@@ -46,7 +48,9 @@ const appRoutes: Routes = [
     ConfigureWidgetComponent,
     EscapeHtmlPipe,
     CodeOutputComponent,
-    AboutLinkComponent
+    AboutLinkComponent,
+    ProgressBarComponent,
+    ProgressStageComponent
   ],
   imports: [
     BrowserModule,

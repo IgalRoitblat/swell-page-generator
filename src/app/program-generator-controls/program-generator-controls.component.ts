@@ -24,6 +24,7 @@ export class ProgramGeneratorControlsComponent implements OnInit {
     console.log("start over");
     this.UserConfigurationService.pageCreationStep = 1;
     this.UserConfigurationService.userGeneratedCode = false;
+    this.UserConfigurationService.configuredWidgets = [];
   }
 
   generatePage() {

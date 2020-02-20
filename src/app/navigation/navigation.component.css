@@ -20,6 +20,25 @@
 	cursor: pointer;
 }
 
+.route:last-of-type {
+	position: relative;
+}
+
 .route:hover {
 	text-decoration: underline;
+}
+
+.get-started-prompt {
+	position: absolute;
+	height: 2rem;
+	width: 2rem;
+	right: 0;
+	top: -20%;
+	animation: move-arrow 1s infinite;
+}
+
+@keyframes move-arrow {
+	100% {
+		right: 30%;
+	}
 }

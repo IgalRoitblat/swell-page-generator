@@ -2,5 +2,6 @@
 	<div class="menu-header">Main Menu</div>
 	<a class="route" routerLink="/" routerLinkActive="active">Home</a>
 	<a class="route" routerLink="/about" routerLinkActive="active">About</a>
-	<a class="route" routerLink="/start" routerLinkActive="active">Get Started</a>
+	<a class="route" (click)="onGetStarted()" routerLink="/start" routerLinkActive="active">Get Started
+	<img #getStartedPrompt class="get-started-prompt" src="../assets/angle-left.svg"></a>
 </nav>

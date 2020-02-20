@@ -1,0 +1,16 @@
+.progress-bar {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+app-progress-stage {
+	margin: 0 2%;
+}
+
+app-progress-stage {
+	position: relative;
+}

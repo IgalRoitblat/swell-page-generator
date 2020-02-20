@@ -1,3 +1,4 @@
+<app-progress-bar *ngIf="this.UserConfigurationService.pageCreationStep != 1"></app-progress-bar>
 <div class="program-generator">
 	<app-choose-widgets *ngIf="this.UserConfigurationService.pageCreationStep === 1"></app-choose-widgets>
 	<div *ngIf="this.UserConfigurationService.pageCreationStep > 1" class="widget-config-container">
