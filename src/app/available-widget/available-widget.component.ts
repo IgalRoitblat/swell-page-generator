@@ -4,7 +4,7 @@ import { UserConfigurationService } from '../Services/user-configuration.service
 @Component({
   selector: 'app-available-widget',
   templateUrl: './available-widget.component.html',
-  styleUrls: ['./available-widget.component.css']
+  styleUrls: ['./available-widget.component.scss']
 })
 export class AvailableWidgetComponent implements OnInit {
 	@Input() widget;

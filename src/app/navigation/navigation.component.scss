@@ -1,0 +1,45 @@
+.main-nav {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+
+	.menu-header {
+		height: 3rem;
+		width: 100%;
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		color: #007bff;
+	}
+
+	.route {
+		margin: 3% 0;
+		width: 100%;
+		color: #495057;
+		text-decoration: none;
+		cursor: pointer;
+		height: 2rem;
+		line-height: 2rem;
+		padding: 0 1.5rem 0;
+		display: flex;
+
+		span {
+			margin-left: 5%; 
+		}
+
+		&:hover {
+			color: #3f6ad8;
+			background: #e0f3ff;
+		}
+	}
+
+	i {
+		&:before {
+			width: 4rem;
+			height: 4rem;
+			font-size: 32px;
+		}
+	}
+}

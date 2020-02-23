@@ -4,7 +4,7 @@ import { UserConfigurationService } from '../Services/user-configuration.service
 @Component({
   selector: 'app-code-output',
   templateUrl: './code-output.component.html',
-  styleUrls: ['./code-output.component.css']
+  styleUrls: ['./code-output.component.scss']
 })
 export class CodeOutputComponent implements OnInit {
 	@ViewChild('copyCode', {static: false}) copyCode: ElementRef;

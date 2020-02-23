@@ -1,0 +1,95 @@
+.configure-widget {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+.widget-config-container {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	h3 {
+		text-align: center;
+		width: 100%;
+	}
+	p {
+		text-align: center;
+		width: 100%;
+	}
+
+	form {
+		width: 50%;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		border: 1px solid #eee;
+		padding: 2%;
+		box-shadow: 0 0.46875rem 2.1875rem rgba(4, 9, 20, 0.03), 0 0.9375rem 1.40625rem rgba(4, 9, 20, 0.03), 0 0.25rem 0.53125rem rgba(4, 9, 20, 0.05), 0 0.125rem 0.1875rem rgba(4, 9, 20, 0.03);
+		.primary {
+			width: 100%;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: center;
+			fieldset {
+				border: none;
+				width: 100%;
+			}
+		}
+		.expan-secondary {
+			width: 100%;
+			text-align: center;
+		}
+		.secondary {
+			width: 100%;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: center;
+			fieldset {
+				border: none;
+				width: 100%;
+			}
+		}
+		.show {
+			display: flex;
+		}
+
+		.hide {
+			display: none;
+		}
+		fieldset {
+			border: none;
+			width: 100%;
+		}
+		.submit-section {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			text-align: center;
+			.save-widget {
+				width: 100%;
+				&:hover {
+					color: #fff;
+					background-color: #0d47a1;
+				}
+			}
+			.save-disclaimer {
+				width: 100%;
+				font-size: 12px;
+				margin-top: 2%;
+			}
+		};
+	}
+
+}
+
+
+
+

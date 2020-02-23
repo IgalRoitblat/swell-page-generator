@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { ReactiveFormsModule } from '@angular/forms'
 import { AppRoutingModule } from './app-routing.module';
 import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
@@ -20,6 +21,7 @@ import { CodeOutputComponent } from './code-output/code-output.component';
 import { AboutLinkComponent } from './about-link/about-link.component';
 import { ProgressBarComponent } from './progress-bar/progress-bar.component';
 import { ProgressStageComponent } from './progress-stage/progress-stage.component';
+import { InputSetComponent } from './input-set/input-set.component';
 
 const appRoutes: Routes = [
   {
@@ -50,7 +52,8 @@ const appRoutes: Routes = [
     CodeOutputComponent,
     AboutLinkComponent,
     ProgressBarComponent,
-    ProgressStageComponent
+    ProgressStageComponent,
+    InputSetComponent
   ],
   imports: [
     BrowserModule,

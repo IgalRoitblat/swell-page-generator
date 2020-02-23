@@ -1,0 +1,26 @@
+.available-widget {
+	width: 100%;
+	min-height: 10rem;
+	min-width: 15rem;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	font-size: 28px;
+	
+	h4 {
+		width: 100%;
+	}
+
+	&:hover {
+		color: #3f6ad8;
+		background: #e0f3ff;
+	}
+
+}
+
+.widgetSelected {
+	color: #3f6ad8;
+	background: #e0f3ff;
+}

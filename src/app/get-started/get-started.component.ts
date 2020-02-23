@@ -4,8 +4,11 @@ import { WidgetsService } from '../Services/widgets.service';
 
 @Component({
   selector: 'app-get-started',
+  host: {
+      class:'app-get-started'
+  },
   templateUrl: './get-started.component.html',
-  styleUrls: ['./get-started.component.css']
+  styleUrls: ['./get-started.component.scss']
 })
 export class GetStartedComponent implements OnInit {
 

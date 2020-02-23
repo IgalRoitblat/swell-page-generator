@@ -1,0 +1,21 @@
+fieldset {
+	border: none;
+	width: 100%;
+
+	.checkbox {
+		width: 100%;
+		display: flex;
+	}
+	
+	.radio-set {
+		margin-left: 1%;
+	}
+	.save-widget {
+		width: 100%;
+		&:hover {
+			color: #fff;
+			background-color: #16aaff;
+			border-color: #16aaff;
+		}
+	}
+}

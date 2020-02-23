@@ -13,6 +13,7 @@ export class WidgetsService {
 				{
 					name: "swell-campaign-grid-layout",
 					pretty: "Grid Layout",
+					configType: "primary",
 					selectionType: 'select',
 					options: [
 						'2',
@@ -23,6 +24,7 @@ export class WidgetsService {
 				{
 					name: "swell-last-campaign-layout",
 					pretty: "Last Campaign Layout",
+					configType: "secondary",
 					selectionType: 'select',
 					options: [
 						'normal',
@@ -32,6 +34,7 @@ export class WidgetsService {
 				{
 					name: "swell-creative-layout",
 					pretty: "Creative Layout",
+					configType: "primary",
 					selectionType: 'select',
 					options: [
 						'icon',
@@ -41,6 +44,7 @@ export class WidgetsService {
 				{
 					name: "swell-login-prompt",
 					pretty: "Show Login Prompt",
+					configType: "secondary",
 					selectionType: 'select',
 					options: [
 						'true',
@@ -50,11 +54,13 @@ export class WidgetsService {
 				{
 					name: "swell-login-destination",
 					pretty: "Login Destination",
+					configType: "secondary",
 					selectionType: 'text',
 				},
 				{
 					name: "swell-signup-destination",
 					pretty: "Signup Destination",
+					configType: "secondary",
 					selectionType: 'text',
 				},
 			]
@@ -67,6 +73,7 @@ export class WidgetsService {
 			{
 				name: "swell-redemption-type",
 				pretty: "Redemption Type",
+				configType: "primary",
 				selectionType: 'select',
 				options: [
 					'product',
@@ -84,6 +91,7 @@ export class WidgetsService {
 				{
 					name: "swell-referral-form-layout",
 					pretty: "Referral Form Layout",
+					configType: "primary",
 					selectionType: 'select',
 					options: [
 						'single_row',
@@ -93,56 +101,67 @@ export class WidgetsService {
 				{
 					name: "swell-referral-pre-header",
 					pretty: "Pre Header Text",
+					configType: "primary",
 					selectionType: 'text',
 				},
 				{
 					name: "swell-referral-title",
 					pretty: "Title",
+					configType: "primary",
 					selectionType: 'text',
 				},
 				{
 					name: "swell-referral-desc",
 					pretty: "Description",
+					configType: "primary",
 					selectionType: 'text',
 				},
 				{
 					name: "swell-referral-new-user-submit",
 					pretty: "New User Submit Button Text",
+					configType: "secondary",
 					selectionType: 'text',
 				},
 				{
 					name: "swell-referral-new-userplaceholder",
 					pretty: "New User Placeholder",
+					configType: "secondary",
 					selectionType: 'text',
 				},
 				{
 					name: "swell-referral-new-usertitle",
 					pretty: "New User Title",
+					configType: "primary",
 					selectionType: 'text',
 				},
 				{
 					name: "swell-referral-exist-user-submit",
 					pretty: "Existing User Submit",
+					configType: "secondary",
 					selectionType: 'text',
 				},
 				{
 					name: "swell-referral-exist-userplaceholder",
 					pretty: "Existing User Placeholder",
+					configType: "secondary",
 					selectionType: 'text',
 				},
 				{
 					name: "swell-referral-exist-usertitle",
 					pretty: "Existing User Title",
+					configType: "primary",
 					selectionType: 'text',
 				},
 				{
 					name: "swell-referral-shre-links-title",
 					pretty: "Share Links Title",
+					configType: "secondary",
 					selectionType: 'text',
 				},
 				{
 					name: "swell-referral-share-links",
 					pretty: "Share Links",
+					configType: "secondary",
 					selectionType: 'checkbox',
 					options: [
 						{
@@ -170,16 +189,19 @@ export class WidgetsService {
 				{
 					name: "swell-referral-popup-copy-link-text",
 					pretty: "Popup Copy Link Text",
+					configType: "secondary",
 					selectionType: 'text',
 				},
 				{
 					name: "swell-referral-popup-thank-title",
 					pretty: "Popup Thank You Title",
+					configType: "secondary",
 					selectionType: 'text',
 				},
 				{
 					name: "swell-referral-popup-thank-text",
 					pretty: "Popup Thank You Text",
+					configType: "secondary",
 					selectionType: 'text',
 				},
 			]
@@ -192,6 +214,7 @@ export class WidgetsService {
 				{
 					name: "swell-vip-layout",
 					pretty: "Table Layout",
+					configType: "primary",
 					selectionType: 'select',
 					options: [
 						'table',
@@ -201,16 +224,19 @@ export class WidgetsService {
 				{
 					name: "swell-checked-icon",
 					pretty: "Checked Icon (unicode or image url)",
+					configType: "secondary",
 					selectionType: 'text',
 				},
 				{
 					name: "swell-current-status-text",
 					pretty: "Current Status Text",
+					configType: "secondary",
 					selectionType: 'text',
 				},
 				{
 					name: "swell-dummy-tier-required",
 					pretty: "If dummy tier required",
+					configType: "primary",
 					selectionType: 'select',
 					options: [
 						'true',
@@ -220,11 +246,13 @@ export class WidgetsService {
 				{
 					name: "swell-dummy-tier-name",
 					pretty: "Dummy Tier Name (if required)",
+					configType: "secondary",
 					selectionType: 'text',
 				},
 				{
 					name: "swell-tier-condition",
 					pretty: "Requirnments to move tiers",
+					configType: "primary",
 					selectionType: 'select',
 					options: [
 						'swellrequiredAmountSpentCents',
@@ -235,12 +263,14 @@ export class WidgetsService {
 				},
 				{
 					name: "swell-customer-currency",
+					configType: "secondary",
 					pretty: "Currency",
 					selectionType: 'text',
 				},
 				{
 					name: "swell-benefits-list",
 					pretty: "Benefits List (rowName:item1,item2,item3;)",
+					configType: "primary",
 					selectionType: 'text',
 				},
 			]
@@ -253,11 +283,13 @@ export class WidgetsService {
 				{
 					name: "swell-referral-history-completed",
 					pretty: "Completed Label",
+					configType: "primary",
 					selectionType: 'text',
 				},
 				{
 					name: "swell-referral-history-invited",
 					pretty: "Invited Label",
+					configType: "primary",
 					selectionType: 'text',
 				},
 			]

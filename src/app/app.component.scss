@@ -1,0 +1,42 @@
+.logo {
+	min-height: 10rem;
+	text-align: center;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-items: center;
+	border-bottom: 1px solid #eee;
+}
+.logo-image {
+	height: 10rem;
+	word-break: 100%;
+	object-fit: contain;
+}
+.swell-page-generator {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+
+	app-navigation {
+		width: 15%;
+		box-sizing: border-box;
+		min-height: 70rem;
+		background-color: #fff;
+		border: 1px solid #fff;
+		border-top: none;
+		padding: 1%;
+		border-right: 1px solid #eee;
+	}
+
+	app-main {
+		width: 85%;
+		box-sizing: border-box;
+		min-height: 70rem;
+		border-top: none;
+		background-color: rgba(230, 230, 230, 0.3);
+		display: flex;
+		justify-content: center;
+		align-items: flex-start;
+	}
+}

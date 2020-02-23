@@ -4,7 +4,7 @@ import { UserConfigurationService } from '../Services/user-configuration.service
 @Component({
   selector: 'app-program-generator-controls',
   templateUrl: './program-generator-controls.component.html',
-  styleUrls: ['./program-generator-controls.component.css']
+  styleUrls: ['./program-generator-controls.component.scss']
 })
 export class ProgramGeneratorControlsComponent implements OnInit {
   constructor(private UserConfigurationService: UserConfigurationService) { }
