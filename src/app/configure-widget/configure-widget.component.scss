@@ -58,11 +58,15 @@
 			}
 		}
 		.show {
-			display: flex;
+			max-height: 1000px;
+			transition: max-height 2s ease-out;
+			overflow: hidden;
 		}
 
 		.hide {
-			display: none;
+			max-height: 0;
+			transition: max-height .5s ease-out;
+			overflow: hidden;
 		}
 		fieldset {
 			border: none;
