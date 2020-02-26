@@ -7,31 +7,45 @@ import { UserConfigurationService } from '../Services/user-configuration.service
   styleUrls: ['./program-generator-controls.component.scss']
 })
 export class ProgramGeneratorControlsComponent implements OnInit {
+  public pageCreationStep = 1;
+  private selectedWidgets = [];
   constructor(private UserConfigurationService: UserConfigurationService) { }
 
   moveToNextStep() {
-  	console.log("next")
-  	this.UserConfigurationService.pageCreationStep++;
+    this.UserConfigurationService.skipToNextPage();
   }
 
   moveToPrevStep() {
-  	console.log("prev")
-  	this.UserConfigurationService.pageCreationStep--;
-    this.UserConfigurationService.userGeneratedCode = false;
+    this.UserConfigurationService.skipToPrevPage();
   }
 
   startOver() {
-    console.log("start over");
-    this.UserConfigurationService.pageCreationStep = 1;
-    this.UserConfigurationService.userGeneratedCode = false;
-    this.UserConfigurationService.configuredWidgets = [];
+    this.UserConfigurationService.startOver();
   }
 
   generatePage() {
-    console.log(this.UserConfigurationService.configuredWidgets)
+    this.UserConfigurationService.generatePageHTML();
+  }
+
+  canGeneratePage() {
+    return this.pageCreationStep === this.selectedWidgets.length + 1 && this.pageCreationStep > 1
+  }
+
+  hasNextStep() {
+    return this.pageCreationStep < this.selectedWidgets.length + 1
+  }
+
+  canGoBack() {
+    return this.pageCreationStep > 2
+  }
+
+  canStartOver() {
+    return this.pageCreationStep > 1
   }
 
   ngOnInit() {
+    this.UserConfigurationService.pageCreationStep.subscribe(step => this.pageCreationStep = step);
+    this.UserConfigurationService.selectedWidgets.subscribe(widgets => this.selectedWidgets = widgets);
   }
 
 }

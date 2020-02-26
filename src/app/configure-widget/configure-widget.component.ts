@@ -1,6 +1,7 @@
 import { Component, OnInit, Input, ViewChild, ElementRef } from '@angular/core';
 import { UserConfigurationService } from '../Services/user-configuration.service';
 import { WidgetsService } from '../Services/widgets.service';
+import { FormGroup, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-configure-widget',
@@ -14,27 +15,22 @@ export class ConfigureWidgetComponent implements OnInit {
 	private primaryInputs = [];
 	private secondaryInputs = [];
 	private isSecondaryExpanded = false;
+	private pageCreationStep = 1;
+
 	constructor(private UserConfigurationService: UserConfigurationService, private WidgetsService: WidgetsService) { }
 
 	register(form) {
-	if (this.UserConfigurationService.configuredWidgets.map(confWidget => confWidget.id).indexOf(this.widget.id) === -1) {
-		this.UserConfigurationService.configuredWidgets.push({...this.stripEmptyValues(Object.entries(form.value)), className: this.widget.className, id: this.widget.id});
+	if (!this.UserConfigurationService.doesWidgetExistInSelection(this.widget)) {
+		this.UserConfigurationService.addWidgetToConfigured(this.widget, form);
 	} else {
-		this.UserConfigurationService.configuredWidgets = this.UserConfigurationService.configuredWidgets.filter(confWidget => confWidget.id !== this.widget.id);
-		this.UserConfigurationService.configuredWidgets.push({...this.stripEmptyValues(Object.entries(form.value)), className: this.widget.className, id: this.widget.id});
+		this.UserConfigurationService.removeWidgetFromConfigured(this.widget);
+		this.UserConfigurationService.addWidgetToConfigured(this.widget, form);
 	}
-	console.log(this.UserConfigurationService.configuredWidgets);
 	this.saveWidget.nativeElement.textContent = "Saved!"
 	}
 
-	stripEmptyValues(object) {
-		let strippedObject = {};
-		object.forEach(entry => {
-			if (entry[1] !== "") {
-				strippedObject[entry[0]] = entry[1]
-			};
-		})
-		return strippedObject;
+	isConfigurationInitiated() {
+		return this.pageCreationStep === this.index + 1
 	}
 
 	secondaryToggle(e) {
@@ -48,6 +44,7 @@ export class ConfigureWidgetComponent implements OnInit {
   ngOnInit() {
   	this.primaryInputs =  this.splitInputsToCategories(this.widget, "primary");
   	this.secondaryInputs = this.splitInputsToCategories(this.widget, "secondary");
+  	this.UserConfigurationService.pageCreationStep.subscribe(step => this.pageCreationStep = step);
   }
 
 }

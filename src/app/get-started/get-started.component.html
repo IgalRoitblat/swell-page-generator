@@ -1,9 +1,9 @@
-<app-progress-bar *ngIf="this.UserConfigurationService.pageCreationStep != 1"></app-progress-bar>
+<app-progress-bar *ngIf="this.pageCreationStep != 1"></app-progress-bar>
 <div class="program-generator">
-	<app-choose-widgets *ngIf="this.UserConfigurationService.pageCreationStep === 1"></app-choose-widgets>
-	<div *ngIf="this.UserConfigurationService.pageCreationStep > 1" class="widget-config-container">
-		<app-configure-widget *ngFor="let widget of this.UserConfigurationService.selectedWidgets; let index = index" [widget]="widget" [index]="index + 1"></app-configure-widget>
+	<app-choose-widgets *ngIf="this.pageCreationStep === 1"></app-choose-widgets>
+	<div *ngIf="this.pageCreationStep > 1" class="widget-config-container">
+		<app-configure-widget *ngFor="let widget of this.selectedWidgets; let index = index" [widget]="widget" [index]="index + 1"></app-configure-widget>
 	</div>
 	<app-program-generator-controls></app-program-generator-controls>
-	<app-code-output *ngIf="this.UserConfigurationService.userGeneratedCode"></app-code-output>
+	<app-code-output *ngIf="this.userGeneratedCode"></app-code-output>
 </div>

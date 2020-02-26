@@ -13,6 +13,14 @@
 		width: 100%;
 	}
 
+	.widget-preview {
+		height: 10rem;
+		width: 100%;
+		background-image: url('../../assets/camaign-background.jpg');
+		background-position: center;
+		background-size: cover;
+	}
+
 	&:hover {
 		color: #3f6ad8;
 		background: #e0f3ff;

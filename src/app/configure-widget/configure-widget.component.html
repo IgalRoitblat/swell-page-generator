@@ -1,55 +1,15 @@
-<div class="configure-widget" *ngIf="UserConfigurationService.pageCreationStep === this.index + 1" class="widget-config-container">
+<div class="configure-widget" *ngIf="isConfigurationInitiated()" class="widget-config-container">
 	<h3>Step {{ index + 1 }}: Configure {{ widget.name }}</h3>
 	<p>Fields that are left blank will be assigned a default value</p>
 	<form #myform="ngForm" (ngSubmit)="register(myform)" class="widgetConfigForm">
-		<div class="primary">
-			<fieldset *ngFor="let field of primaryInputs">
-				<label *ngIf="field.selectionType === 'select'">
-					<span>Choose {{ field.pretty }}: </span>
-					<select name="{{ field.name }}" ngModel>
-						<option *ngFor="let option of field.options" value="{{ option }}">{{ option }}</option>
-					</select>
-				</label>
-				<label *ngIf="field.selectionType === 'checkbox'" class="checkbox">
-					<span>Choose {{ field.pretty }}: </span>
-					<div *ngFor="let option of field.options" class="radio-set">
-						<input type="checkbox" name="{{ option.name }}" value="{{ option.value }}" ngModel>
-						<span>{{ option.value }}</span>
-					</div>
-				</label>
-				<label *ngIf="field.selectionType === 'text'">
-					<span>Choose {{ field.pretty }}: </span>
-					<input type="text" name="{{ field.name }}" ngModel>
-				</label>
-			</fieldset>
-		</div>
+		<app-input-set class="primary" [inputs]="primaryInputs"></app-input-set>
 		<div *ngIf="secondaryInputs.length > 0" #expandSecondary class="expan-secondary" (click)="secondaryToggle()">
 			<h4>Secondary Settings 
 				<i *ngIf="!isSecondaryExpanded" class="fa fa-chevron-down"></i>
 				<i *ngIf="isSecondaryExpanded" class="fa fa-chevron-up"></i>
 			</h4>
 		</div>
-		<div class="secondary" [ngClass]="isSecondaryExpanded ? 'show' : 'hide'">
-			<fieldset *ngFor="let field of secondaryInputs">
-				<label *ngIf="field.selectionType === 'select'">
-					<span>Choose {{ field.pretty }}: </span>
-					<select name="{{ field.name }}" ngModel>
-						<option *ngFor="let option of field.options" value="{{ option }}">{{ option }}</option>
-					</select>
-				</label>
-				<label *ngIf="field.selectionType === 'checkbox'" class="checkbox">
-					<span>Choose {{ field.pretty }}: </span>
-					<div *ngFor="let option of field.options" class="radio-set">
-						<input type="checkbox" name="{{ option.name }}" value="{{ option.value }}" ngModel>
-						<span>{{ option.value }}</span>
-					</div>
-				</label>
-				<label *ngIf="field.selectionType === 'text'">
-					<span>Choose {{ field.pretty }}: </span>
-					<input type="text" name="{{ field.name }}" ngModel>
-				</label>
-			</fieldset>
-		</div>
+		<app-input-set class="secondary" [ngClass]="isSecondaryExpanded ? 'show' : 'hide'" [inputs]="secondaryInputs"></app-input-set>
 		<fieldset class="submit-section">
 			<button #saveWidget class="save-widget" type="submit">Save Widget Settings</button>
 			<span class="save-disclaimer"><span style="color: red;">Important!</span> Only saved widgets will be included in the code output.</span>

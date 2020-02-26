@@ -11,10 +11,15 @@ import { WidgetsService } from '../Services/widgets.service';
   styleUrls: ['./get-started.component.scss']
 })
 export class GetStartedComponent implements OnInit {
-
+	public pageCreationStep = 1;
+	public selectedWidgets = null;
+  private userGeneratedCode = false;
   constructor(private UserConfigurationService: UserConfigurationService, private WidgetsService: WidgetsService) { }
 
   ngOnInit() {
+  	this.UserConfigurationService.pageCreationStep.subscribe(step => this.pageCreationStep = step);
+  	this.UserConfigurationService.selectedWidgets.subscribe(widgets => this.selectedWidgets = widgets);
+    this.UserConfigurationService.userGeneratedCode.subscribe(response => this.userGeneratedCode = response);
   }
 
 }

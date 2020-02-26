@@ -27,10 +27,14 @@
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
-		align-items: center;
+		align-items: flex-start;
 		border: 1px solid #eee;
+		min-height: 25rem;
 		padding: 2%;
 		box-shadow: 0 0.46875rem 2.1875rem rgba(4, 9, 20, 0.03), 0 0.9375rem 1.40625rem rgba(4, 9, 20, 0.03), 0 0.25rem 0.53125rem rgba(4, 9, 20, 0.05), 0 0.125rem 0.1875rem rgba(4, 9, 20, 0.03);
+		app-input-set {
+			width: 100%;
+		}
 		.primary {
 			width: 100%;
 			display: flex;

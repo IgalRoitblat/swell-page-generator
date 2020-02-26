@@ -14,23 +14,21 @@ export class AvailableWidgetComponent implements OnInit {
 	}
 
 	onWidgetSelect() {
-		console.log("clicked");
 		this.selected = !this.selected;
 		this.selected ? this.addWidgetToSelection() : this.removeWidgetFromSelection();
-		console.log(this.UserConfigurationService.selectedWidgets);
 
 	}
 
 	addWidgetToSelection() {
-		this.UserConfigurationService.selectedWidgets.push(this.widget)
+		this.UserConfigurationService.addWidgetToSelection(this.widget);
 	}
 
 	removeWidgetFromSelection() {
-		this.UserConfigurationService.selectedWidgets = this.UserConfigurationService.selectedWidgets.filter(widget => widget.id !== this.widget.id)
+		this.UserConfigurationService.removeWidgetFromSelection(this.widget);
 	}
 
 	ngOnInit() {
-		if (this.UserConfigurationService.selectedWidgets.map(widget => widget.id).indexOf(this.widget.id) !== -1) {
+		if (this.UserConfigurationService.selectedWidgets.value.map(widget => widget.id).indexOf(this.widget.id) !== -1) {
 			this.selected = true;
 		}
 	}

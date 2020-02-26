@@ -1,3 +1,3 @@
 <div class="progress-bar">
-	<app-progress-stage *ngFor="let widget of this.UserConfigurationService.selectedWidgets; let index = index" [widget]="widget" [index]="index" [currentStep]="this.UserConfigurationService.pageCreationStep - 1"></app-progress-stage>
+	<app-progress-stage *ngFor="let widget of this.selectedWidgets; let index = index" [widget]="widget" [index]="index" [currentStep]="this.pageCreationStep - 1"></app-progress-stage>
 </div>

@@ -4,6 +4,12 @@
 	justify-content: center;
 	align-items: center;
 	margin-top: 1%;
+	button {
+		&:hover {
+			color: #fff;
+			background-color: #0d47a1;
+		}
+	}
 }
 
 code {
@@ -19,4 +25,11 @@ code {
 p {
 	width: 100%;
 	text-align: center;
+}
+
+@media screen and (min-width: 1440px) {
+	code {
+		width: 80%;
+		height: 5rem;
+	}
 }

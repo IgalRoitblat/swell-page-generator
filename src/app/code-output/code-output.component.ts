@@ -8,15 +8,19 @@ import { UserConfigurationService } from '../Services/user-configuration.service
 })
 export class CodeOutputComponent implements OnInit {
 	@ViewChild('copyCode', {static: false}) copyCode: ElementRef;
+	private generatedPageString = '';
 	constructor(private UserConfigurationService: UserConfigurationService) { }
 
 	onCopyCode() {
 		console.log("Copied!");
-		navigator.clipboard.writeText(this.UserConfigurationService.generatedPageString);
+		navigator.clipboard.writeText(this.generatedPageString);
 		this.copyCode.nativeElement.textContent = "Copied!"
 	}
 
   	ngOnInit() {
+  		this.UserConfigurationService.generatedPageString.subscribe(value => {
+  			this.generatedPageString = value;
+  		})
   	}
 
 }

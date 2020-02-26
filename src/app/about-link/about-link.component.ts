@@ -6,7 +6,7 @@ import { Component, OnInit, Input, ViewChild, ElementRef } from '@angular/core';
   styleUrls: ['./about-link.component.scss']
 })
 export class AboutLinkComponent implements OnInit {
-	@Input() link;
+	@Input() linkObj;
 	@ViewChild('copyLink',{static:false}) copyLink: ElementRef;
 	constructor() { }
 
